@@ -129,9 +129,6 @@ hr {
     color: rgb(200, 200, 200);
 }
 
-.address * {
-}
-
 .address li {
     /* margin: 1.5rem 0; */
     margin-top: 1rem;
@@ -148,4 +145,57 @@ footer {
     flex-wrap: wrap;
     width: 100%;
     justify-content: space-around;
+}
+
+@media screen and (min-width: 720px) {
+    .title {
+        padding-bottom: 0.5rem;
+    }
+
+    .header ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+
+    }
+
+    .header ul li {
+        background-color: beige;
+        padding: 0 2rem;
+    }
+    
+    .introduction {
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 0;
+        padding: 0 1.5rem;
+    }
+    
+    .introduction * {
+        text-align: left;
+        border: 1px solid red;
+        width: 100%;
+    }
+
+    .introduction p {
+        width: 55%;
+        margin: 0;
+        padding: 1rem;
+    }
+
+    #profile-picture {
+        width: 45%;
+        /* height: auto; */
+        margin: 0;
+        padding: 1rem;
+    }
+
+    #portfolio:target::before {
+        content:"";
+        display:block;
+        /* height: 550px; */
+        margin: -120px 0 0;
+    }
 }
