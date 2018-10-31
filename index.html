@@ -13,17 +13,19 @@
 
 <body>
     <header id="profile">
-        <div class="top-container">
-            <h1 class="title name"></h1>
-        </div>
+        <!-- <div id="fumebox"> -->
+            <div class="top-container" id="profile-title">
+                <h1 class="title name"></h1>
+            </div>
 
-        <nav class="header" id="myHeader">
-            <ul>
-                <li><a href="#profile">Home</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+            <nav class="header" id="myHeader">
+                <ul>
+                    <li><a href="#profile">Home</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        <!-- </div> -->
 
         <div class="introduction">
             <img src="./images/responsive-layout-profile.png" alt="My Profile Picture" id="profile-picture">
@@ -102,7 +104,12 @@
                 <span class="name"></span>
             </div>
             <div class="separator">
-                <span><a href="#profile">BACK TO TOP</a></span>
+                <span class="appear-usual"><a href="#profile">BACK TO TOP</a></span>
+                <span class="appear-large">
+                    <div>HOME</div>
+                    <div>PORTFOLIO</div>
+                    <div>CONTACT</div>
+                </span>
             </div>
         </div>
     </footer>
@@ -111,6 +118,8 @@
         window.onscroll = function () {
             myFunction()
         };
+
+        var profile = document.getElementById("profile-title");
 
         var header = document.getElementById("myHeader");
         var sticky = header.offsetTop;
@@ -121,9 +130,12 @@
         function myFunction() {
             if (window.pageYOffset > sticky) {
                 header.classList.add("sticky");
-                profilePicture.style.paddingTop = "100px";
+                profile.classList.add("sticky-header");
+                // profilePicture.style.paddingTop = "100px";
+                profilePicture.classList.add("big-gap");
             } else {
                 header.classList.remove("sticky");
+                profile.classList.remove("sticky-header");
                 profilePicture.style.paddingTop = "0";
             }
         }
