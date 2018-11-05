@@ -36,8 +36,8 @@
         </div>
     </header>
 
-    <main class="content">
-        <section id="portfolio">
+    <main class="content" id="portfolio">
+        <section>
             <div class="container">
                 <h2 class="title">Portfolio</h2>
                 <div class="cards">
@@ -141,7 +141,8 @@
             } else {
                 header.classList.remove("sticky");
                 profile.classList.remove("sticky-header");
-                profilePicture.style.paddingTop = "0";
+                // profilePicture.style.paddingTop = "0";
+                profilePicture.classList.remove("big-gap");
             }
         }
     </script>
