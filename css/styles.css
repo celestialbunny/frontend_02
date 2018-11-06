@@ -85,8 +85,8 @@ a:visited {
 }
 
 #profile-picture {
-    /* width: 100%;
-    max-width: 500px; */
+    width: 100%;
+    max-width: 350px;
 }
 
 .introduction p {
@@ -103,7 +103,7 @@ a:visited {
 
 .small-title {
     font-size: 1.5rem;
-    padding: 1.8rem 0;
+    padding: 0.8rem 0;
 }
 
 main.content {
@@ -115,16 +115,14 @@ main.content {
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    margin-bottom: 2rem;
     padding: 0 1rem;
-    /* transition: cubic-bezier(0.165, 0.84, 0.44, 1); */
     transition: all 0.5s;
 }
 
 .cards:hover {
     background-color: rgba(164, 101, 223, 0.8);
     box-shadow: 0 15px 30px 0 rgba(0,0,0,0.31),
-                0 5px 15px 0 rgba(0,0,0,0.38);
+    0 5px 15px 0 rgba(0,0,0,0.38);
 }
 
 .cards img {
@@ -133,10 +131,38 @@ main.content {
     width: 100%;
     height: 200px;
     position: relative;
+    padding-top: 0.5rem;
 }
 
 .description {
     padding-top: 0.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+/* Skill Styles */
+.skill-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-bottom: 2rem;
+}
+
+.skill-container li {
+    flex: 1 300px;
+    padding: 1rem;
+    text-align: justify;
+}
+
+.skill-container li:hover [class^="icon"] {
+    color: orangered;
+}
+
+[class^="icon"] {
+    font-size: 2rem;
+    float: left;
+    padding-right: 0.5rem;
+    transition: all 0.5s;
 }
 
 /* Contact Styles */
